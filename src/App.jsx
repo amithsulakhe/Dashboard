@@ -1,5 +1,6 @@
 
 import './App.css'
+import Error from "./Components/Error"
 import Dashboard from './Components/Dashboard'
 import EmployeeList from './Components/EmployeeList'
 import LoginPage from './Components/LoginPage'
@@ -9,11 +10,21 @@ const appRouter=createBrowserRouter([
       {
         path:"/",
         element:<LoginPage/>,
+        errorElement:<Error/>
       },
       {
         path:"dashboard",
         element:<Dashboard/>,
-      }
+      },
+      {
+        path:"home",
+        element:<Dashboard/>,
+      },
+      {
+        path:"employee",
+        element:<EmployeeList/>,
+      },
+
     
   ])
 function App() {

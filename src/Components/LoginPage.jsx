@@ -6,15 +6,11 @@ const LoginPage = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [isLogin,setIsLogin]=useState(false)
-  useEffect(()=>{
-    console.log(Boolean(localStorage.getItem("value")));
-    Boolean(localStorage.getItem("value"))?navigate("dashboard"):navigate("/")
-  },[isLogin])
+
 const handleSubmit=()=>{
 const login=true
 setIsLogin(login)
-localStorage.setItem("value",login)
-navigate("dashboard")
+navigate("/dashboard")
 
 }
   return (
@@ -25,8 +21,8 @@ navigate("dashboard")
     </div>
     <div className="login-container">
         <form action="" className='form-data' onSubmit={(e)=>e.preventDefault()}>
-            <input type="text" value={email}  onChange={(e)=>setEmail(e.target.value)} placeholder='E-mail'/>
-            <input type="text" value={password} onChange={(e)=>setPassword(e.target.value)}  placeholder='password' />
+            <input type="email"value={email}  onChange={(e)=>setEmail(e.target.value)} placeholder='E-mail' required/>
+            <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)}  placeholder='password' required/>
             <button type='submit' onClick={handleSubmit}>Submit</button>
             <span>Forgot Password?</span>
         </form>
