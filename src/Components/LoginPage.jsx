@@ -10,7 +10,10 @@ const LoginPage = () => {
 const handleSubmit=()=>{
 const login=true
 setIsLogin(login)
-navigate("/dashboard")
+if(email && password){
+  navigate("/dashboard")
+
+}
 
 }
   return (
