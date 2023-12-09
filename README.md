@@ -9,7 +9,7 @@ This is a React-based dashboard application that includes a Sign-In page, Produc
 - HTML
 - CSS
 
-
+## Mobile Compatibility only
 
 ## Link 
-    # https://tourmaline-kitsune-6ac7bf.netlify.app/
+     https://tourmaline-kitsune-6ac7bf.netlify.app/
