@@ -122,7 +122,6 @@
   height: 45px;
   filter: blur(0px);
   background: var(--dashboard-bg-color) 0% 0% no-repeat padding-box;
-  box-shadow: inset 0px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 28px;
   display: flex;
   align-items: center;
@@ -139,7 +138,7 @@
 
 .productivity-range {
   width: 328px;
-  background: var(--productivity-bg-color) 0% 0% no-repeat padding-box;
+  background: #131816;
   box-shadow: inset 0px 4px 0px rgba(0, 0, 0, 0.25);
   mix-blend-mode: normal;
   opacity: 0.4;

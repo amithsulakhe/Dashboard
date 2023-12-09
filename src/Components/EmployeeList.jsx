@@ -1,80 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { arr } from "./constants/constant"
+import { Data } from "./constants/constant"
 import img2 from "../assets/moptro logo.png"
 import img3 from "../assets/Group 46@2x.png"
 
 import Buttons from './Buttons'
 import { useNavigate } from 'react-router-dom'
-const Data = [
 
-
-  {
-    id: 1,
-    name: "Arjun",
-    dob: "15-01-2000",
-    role: "Web developer"
-  }
-  ,
-
-  {
-    id: 2,
-    name: "Mahesh",
-    dob: "15-01-2000",
-    role: "Web developer"
-  },
-  {
-    id: 3,
-    name: "Arjun",
-    dob: "15-01-2000",
-    role: "Web developer"
-  }
-  ,
-
-  {
-    id: 4,
-    name: "Mahesh",
-    dob: "15-01-2000",
-    role: "Web developer"
-  }
-  ,
-  {
-    id: 5,
-    name: "Arjun",
-    dob: "15-01-2000",
-    role: "Web developer"
-  }
-  ,
-
-  {
-    id: 6,
-    name: "Mahesh",
-    dob: "15-01-2000",
-    role: "Web developer"
-  }
-  , {
-    id: 7,
-    name: "Arjun",
-    dob: "15-01-2000",
-    role: "Web developer"
-  }
-  ,
-
-  {
-    id: 8,
-    name: "Mahesh",
-    dob: "15-01-2000",
-    role: "Web developer"
-  }
-,
-{
-  id: 9,
-  name: "Amith",
-  dob: "15-01-2000",
-  role: "Web developer"
-}
-
-
-]
 const EmployeeList = () => {
   const [inputValue, setInputValue] = useState("")
   const [filteredData,setFilteredData]=useState([])
@@ -82,7 +13,7 @@ const EmployeeList = () => {
 
   useEffect(()=>{
     if(inputValue){
-      const filterData=Data.filter((e)=>e.name.includes(inputValue))
+      const filterData=Data.filter((e)=>e.name.toLocaleLowerCase().includes(inputValue.toLocaleLowerCase()))
       setFilteredData(filterData)
       console.log(filterData);
     }
